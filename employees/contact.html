@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding Employees --> DB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- new add icon in title-->
+    <link rel="icon" href="../../../img-wrapp/icon1.png" type="image/x-icon"> <!-- new add icon in title-->
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+
+        input[type=text]{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 30%;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h3>Contact Form</h3>
+    <form id="frm1" action="empl.php" method="post" >
+        <label for="e_name">Name</label>
+        <input type="text" id="e_name" name="e_name" placeholder="Your name..">
+
+        <label for="design">Designation</label>
+        <input type="text" id="design" name="design" placeholder="Your designation..">
+
+        <input name="submit" type="submit" value="Submit">
+    </form>
+</div>
+<span id="demo1"></span>
+<script language="JavaScript">
+    var fullName = document.getElementById("e_name");
+    var designator = document.getElementById("design");
+
+    var resultDes = /^[a-zA-Z ]+$/.test( designator.value);
+    var resultName = /^[a-zA-Z ]+$/.test( fullName.value);
+</script>
+</body>
+</html>
